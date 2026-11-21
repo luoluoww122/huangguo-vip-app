@@ -36,6 +36,12 @@ jobs:
       - name: Flutter version
         run: flutter --version
 
+      - name: Fix Gradle Flutter SDK path
+        run: |
+          FLUTTER_SDK_PATH=$(flutter sdk-path)
+          sed -i "s|.*flutter.sdk.*|def localProperties = new Properties()\nlocalProperties.setProperty('flutter.sdk', '$FLUTTER_SDK_PATH')|" android/local.properties
+          echo "Fixed flutter.sdk path to: $FLUTTER_SDK_PATH"
+
       - name: Install dependencies
         run: flutter pub get
 
