@@ -6,7 +6,7 @@ android/local.properties
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
 
-# Flutter 自动生成的插件缓存（含本机绝对路径，不能提交）
+# 自动生成，含本机绝对路径，不能提交
 .flutter-plugins
 .flutter-plugins-dependencies
 .pub-cache/
@@ -16,9 +16,6 @@ ios/Flutter/flutter_export_environment.sh
 # Android
 android/captures/
 android/key.properties
-android/app/debug/
-android/app/profile/
-android/app/release/
 
 # iOS
 ios/Flutter/ephemeral/
