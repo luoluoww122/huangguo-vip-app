@@ -1,5 +1,12 @@
 pluginManagement {
-    def flutterSdkPath = new File("/vol1/@appshare/octop-native/data/.octop/agents/alan/flutter-sdk").getAbsolutePath()
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream { properties.load(it) }
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+        return flutterSdkPath
+    }()
+
     includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
 
     repositories {
