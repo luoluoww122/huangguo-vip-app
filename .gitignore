@@ -5,3 +5,27 @@ android/.gradle/
 android/local.properties
 ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_export_environment.sh
+
+# Flutter 自动生成的插件缓存（含本机绝对路径，不能提交）
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+.packages
+
+# Android
+android/captures/
+android/key.properties
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+# iOS
+ios/Flutter/ephemeral/
+ios/Pods/
+ios/.symlinks/
+
+# IDE
+.idea/
+.vscode/
+*.swp
